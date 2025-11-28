@@ -86,7 +86,7 @@
             display: block;
             width: 70px;
             height: 70px;
-            background: url('./approve.png') center/contain no-repeat;
+            background: url('./asset/img/verified_badge/Verified\(RED\).png') center/contain no-repeat;
         }
 
         .card-body {
