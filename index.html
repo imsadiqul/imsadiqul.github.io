@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="asset/img/profile/Profile-1.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadiqul Islam // Profile</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-card">
+        <div class="card-header">
+            <div class="decoration"></div>
+            <div class="decoration"></div>
+            <div class="profile-image-container">
+                <img src="asset/img/profile/Profile-1.png" alt="Profile Picture" class="profile-image">
+                <div class="verified-badge"></div>
+            </div>
+            <div class="theme-toggle" id="themeToggle">
+                <i data-feather="moon"></i>
+            </div>
+            <div class="notification" id="notificationBell">
+                <i data-feather="bell"></i>
+            </div>
+            <div class="online-status" id="onlineStatus">
+                <div class="status-dot"></div>
+                <span>Online</span>
+            </div>
+            <div class="profile-views">
+                <i data-feather="eye"></i> 3.2K
+            </div>
+        </div>
+        <div class="card-body">
+            <h2 class="name">Sadiqul Islam</h2>
+            <p class="title">CSE Student at EUB</p>
+            <p class="description" id="description">Passionate about coding and creating innovative web solutions. Currently pursuing Computer Science and Engineering. Click to see more!</p>
+            
+            <div class="social-links">
+                <a href="https://facebook.com/sadikul.islam.671553" class="social-link facebook" data-tooltip="Facebook">
+                    <i data-feather="facebook"></i>
+                </a>
+
+                <a href="https://github.com/imsadiqul" class="social-link github" data-tooltip="GitHub">
+                    <i data-feather="github"></i>
+                </a>
+
+                <!--<a href="https://twitter.com" class="social-link twitter" data-tooltip="Twitter">
+                    <i data-feather="twitter"></i>
+                </a>
+                <a href="https://linkedin.com" class="social-link linkedin" data-tooltip="LinkedIn">
+                    <i data-feather="linkedin"></i>
+                </a>-->
+            </div>
+            
+            <div class="action-buttons">
+                <a href="https://fb.com/sadikul.islam.671553" target="_blank" class="btn btn-follow" id="followBtn">
+                    <i data-feather="user-plus"></i> Follow
+                </a>
+                <a href="https://m.me/sadikul.islam.671553" class="btn btn-message" id="messageBtn">
+                    <i data-feather="message-circle"></i> Message
+                </a>
+            </div>
+            
+            <div class="typing-indicator" id="typingIndicator">
+                Openning <div class="typing-dots"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+            <div class="notification-title">Notifications</div>
+            <div class="notification-count">3 New</div>
+            <button class="close-notifications" id="closeNotifications">
+                <i data-feather="x"></i>
+            </button>
+        </div>
+        <div class="notification-list">
+            <div class="notification-item unread">
+                <div class="notification-icon like">
+                    <i data-feather="heart"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-text">
+                        <strong>Sarah Johnson</strong> liked your post about web development
+                    </div>
+                    <div class="notification-time">5 minutes ago</div>
+                </div>
+            </div>
+            <div class="notification-item unread">
+                <div class="notification-icon comment">
+                    <i data-feather="message-square"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-text">
+                        <strong>Alex Chen</strong> commented on your project update
+                    </div>
+                    <div class="notification-time">1 hour ago</div>
+                </div>
+            </div>
+            <div class="notification-item unread">
+                <div class="notification-icon follow">
+                    <i data-feather="user-plus"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-text">
+                        <strong>Michael Rodriguez</strong> started following you
+                    </div>
+                    <div class="notification-time">3 hours ago</div>
+                </div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-icon message">
+                    <i data-feather="mail"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-text">
+                        <strong>Tech Community</strong> sent you a group message
+                    </div>
+                    <div class="notification-time">1 day ago</div>
+                </div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-icon like">
+                    <i data-feather="heart"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-text">
+                        <strong>Emma Wilson</strong> liked your photo
+                    </div>
+                    <div class="notification-time">2 days ago</div>
+                </div>
+            </div>
+        </div>
+        <div class="notification-actions">
+            <button class="mark-all-read" id="markAllRead">
+                <i data-feather="check-circle"></i> Mark All as Read
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i data-feather="check-circle"></i>
+            </div>
+            <h3 class="modal-title">Success!</h3>
+            <p class="modal-text" id="modalText">Your action was completed successfully.</p>
+            <div class="modal-actions">
+                <button class="modal-btn primary" id="closeModal">Continue</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://musfiqur-jahin.web.app/FOOTER.js"></script>
+
+</html>
